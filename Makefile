@@ -6,6 +6,6 @@ include $(THEOS)/makefiles/common.mk
 TWEAK_NAME = NewDevice
 NewDevice_FILES = Tweak.xm
 NewDevice_CFLAGS = -fobjc-arc
-NewDevice_FRAMEWORKS = UIKit Foundation
+NewDevice_FRAMEWORKS = UIKit Foundation CoreGraphics
 
 include $(THEOS_MAKE_PATH)/tweak.mk
