@@ -20,7 +20,14 @@
                             handler:nil];
         [alert addAction:ok];
         
-        UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+        UIViewController *rootVC = nil;
+        if (@available(iOS 13.0, *)) {
+            UIWindowScene *windowScene = (UIWindowScene *)[[UIApplication sharedApplication].connectedScenes anyObject];
+            rootVC = windowScene.windows.firstObject.rootViewController;
+        } else {
+            rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+        }
+        
         if (rootVC) {
             [rootVC presentViewController:alert animated:YES completion:nil];
         }
