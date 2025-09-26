@@ -1,0 +1,9 @@
+Package: com.github.newdevice
+Name: NewDevice
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: iOS一键新机插件 - GitHub编译
+Maintainer: YourName
+Author: YourName
+Section: Tweaks
+Depends: mobilesubstrate
